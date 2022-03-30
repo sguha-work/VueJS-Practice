@@ -1,9 +1,8 @@
 <template>
-  <h2>Login Form</h2>
+  <h2>Signup Form</h2>
 
-  <AuthForm heading="Please login through here" action="Login"></AuthForm>
+  <AuthForm heading="Please sign up through here" action="Sign up"></AuthForm>
   <div class="container" style="background-color: #f1f1f1">
-    <span class="psw">Not joined yet?? please <router-link to="/join">Signup</router-link></span>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </template>
@@ -81,7 +80,7 @@ span.psw {
 import AuthForm from "@/components/AuthFormComponent.vue";
 
 export default {
-  name: "LoginView",
+  name: "SignupView",
   components: {
     AuthForm,
   },

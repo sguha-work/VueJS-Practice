@@ -1,4 +1,5 @@
 <template>
+<h3>{{heading}}</h3>
   <form action="/action_page.php" method="post" @submit.prevent="login">
     <div class="imgcontainer">
       <img
@@ -43,22 +44,20 @@
         required
       />
 
-      <button type="submit">Login</button>
+      <button type="submit">{{action}}</button>
       <label>
         <input type="checkbox" checked="checked" name="remember" /> Remember me
       </label>
-    </div>
-
-    <div class="container" style="background-color: #f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
 </template>
 <script>
 export default {
-  name: "LoginForm",
-  props: {},
+  name: "AuthForm",
+  props: {
+    heading: String,
+    action: String
+  },
   data() {
     return {
       displayText: {
